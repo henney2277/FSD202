@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--lang 속성은 메인언어 속성(언어별코드가 있음)
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title> 네이버 요약 뉴스 -스포츠-</title>
+    <style>
+        div {
+            /*div는 블록 박스다*/
+            width: 700px;
+            margin: 0 auto;
+            /*마진 위아래는 0, 양쪽은 자동*/
+            /*크기를 가진 블록 박스가 중앙에온다*/
+        }
+
+
+
+
+        /*css주석*/
+
+        /*선택요소명{
+    속성명: 값;
+        }*/
+    </style>
+</head>
+
+<body>
+
+    <!--1.상단부분-->
+    <div>
+        <!--1-1. 큰제목-->
+        <h1>내이바 요약 뉴스 -스포츠-</h1>
+        <!--h1요소는 한문서안에 하나만 사용하자-->
+        <!--1-2.메뉴-->
+        <h2>
+            <a href="index.html" style="text-decoration:none">
+                <img src="images/logo.png" alt="네이버로고" style="width:50px; vertical-align:middle;">
+                <!--style 속성: 모든요소에 사용가능
+            -속성명: 값;
+            -css 속성을 셋ㅌ팅 할수 있다
+            -css 인라인 셋팅(코딩)이라고 한다-->
+            </a>
+
+          <a href="sub_1.html"style="text-decoration: none">정치</a> |
+            <a href="sub_2.html"style="text-decoration: none">경제</a> |
+            <a href="sub_3.html"style="text-decoration: none">사회</a> |
+            <a href="sub_4.html"style="text-decoration: none">스포츠</a> |
+            <a href="sub_5.html"style="text-decoration: none">IT/과학</a> |
+        </h2>
+        <hr>
+        <!--hr은 수평선을 뜻한다 -->
+
+    </div>
+    <!--div 요소: 내용을 구분하는 블럭요소(다른내용을 옆에 오지 못하게 막아준다__랩핑했다~고 함-->
+    
+    <!--span 요소: 내용의 범위를 지정하는 요소
+    -다른 특성이 없는 인라인요소의 대표 태크-->
+    
+    
+    <!--2.중앙내용-->
+    <div>
+        <a href="http://isplus.joins.com/">
+            <img src="images/al4.png">
+        </a>
+
+        <a href="images/alogo4.jpg">
+            <img src="images/alogo4.jpg"style="width:  100%">
+        </a>
+        <p><strong>LG, 1차 지명 투수 강효종과 2억원에 사인</strong>…11명 전원 계약 완료
+        <p><b>팬들은 함박웃음😊😁🤣</b>
+        <p>LG가 2021년 신인 선수 11명 전원과 입단 계약을 마쳤다.</p>
+
+        <p>LG는 2021 1차지명<sup>①</sup> 투수 강효종<small>(충암고)</small>과 계약금 2억 원에 최종 사인을 마쳤다. <strong>LG는 "강효종은 안정된 경기 운영과 변화구 구사 능력이 뛰어나다. 투구 커멘드 능력이 뛰어난 즉시 전력감 선수"</strong>라고<del>쓰고 개소리라고 읽는다</del> 소개했다.</p>
+
+        <p><em>2차 1라운드에 지명된 세광고 내야수 이영빈은 계약금 <mark>1억 3000만원</mark>, 2라운드 중앙대 투수 김진수와 <mark>1억 원</mark>에 계약했다.</em> <i>올해 지명한 선수 11명과 계약을 완료했다.</i></p>
+        <pre>마음대로 띄어쓰기도 가능하고 편하게 쓸수 있는데 
+        
+        
+        
+        
+        코드상에 연습장인것인강?ㅇㅁㄴ
+        ㅇ?ㅁ
+        
+        
+        
+        ㄴ?ㅇ</pre>
+
+        <h3><abbr title="lucky gumsung">LG</abbr>트윈스의 창단</h3>
+        <!--blockquot 요소: 인용구를 블록으로 영역잡는 요소
+        -주의사항:p요소안에 넣지말자
+        (p태그는 안에는 블록요소를 쓸수 없다) 
+        
+        -abbr 요속 : 줄임말표시
+        (title 속성 필수! 마우스 가져다 대면 설명뜸)-->
+
+        <!--cite 요소: 작품명 등을 인용할때 쓰인다 -->
+        <!--bdo 요소: 문자출력을 반대순서로 할때
+        -dir 속성: 값으로 "rtl"(right to reft)
+        -아라비아 문자 이스라엘문자 등 반대 방향의 문자 출력시 사용-->
+        <!--pre 요소: 띄어쓰기나 줄바꿈을 하면 그대로 출력이됨
+-일반적으로 띄어쓰기는 여러번 해도 한칸만 띄어진다
+줄바꿈은 br요소를 사용해야 한다
+-일반적으로 여러번 띄어쓰기를 할거면 (&nbsp;)을 사용하도록 한다 이것은 공백이란 뜻이다-->
+
+
+
+        <!--q요소는 쌍따옴표로 표시되고 코드짤때 이것 역시 약속 표준 이해해야한다-->
+        <blockquot cite="https://terms.naver.com/entry.nhn?docId=1184537&cid=40942&categoryId=32009">한국야구위원회에 소속된 프로야구팀으로서 서울특별시를 연고지로 하며, 구단주는 구광모이다. <q><b><mark>1982년</mark></b></q> 한국프로야구와 함께 출범한 <q>MBC 청룡을 <b><mark><u>인수</u></mark></b></q>하여 <q><b>1990년 3월 15일</b></q> <b><mark><u>창단</u></mark></b>하였다.</blockquot>
+
+        <bdo dir="rtl">반대로 쓰기 할꺼야</bdo>
+
+        <hr>
+        <!--구분선-->
+        <small>①1차 지명이 성공을 보장하지는 않는다</small>
+
+        <a href="images/alogo4_1.jpg">
+            <img src="images/alogo4_1.jpg">
+        </a>
+    </div>
+    <!--3.하단부분-->
+    <div>
+        <hr>
+        <!--구분선-->
+        <!--주소-->
+        <address>
+            서울시 강동구 천호동 동원빌딩 5층
+            <br>
+            <!--br은 개행-->
+            대표 : jacop na
+            <br>
+            tel: 02-444-4444
+
+        </address>
+    </div>
+
+
+</body></html>

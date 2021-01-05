@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>심슨가족 소개 애니</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+
+
+        /*전체박스*/
+        .house {
+            position: relative;
+            /*부모자격*/
+            width: 800px;
+            height: 441px;
+            background: url(images/house.png) no-repeat;
+            margin: 0 auto;
+            /*마영오 블록박스 가로 중앙정렬*/
+
+            /*원근설정*/
+            perspective: 480px;
+            overflow: hidden;
+        }
+
+        .door {
+            position: absolute;
+            bottom: 83px;
+            left: 356px;
+            width: 32px;
+            /*문짝 Y축 회전 원근으로 보이려면 부모에게 perspective*/
+            transform: rotateY(0deg);
+            transform-origin: right;
+            /*문짝축 오른쪽변경*/
+
+            animation: doorAni 2s ease-in-out 4s;
+        }
+
+
+        /*문열기 키프레임*/
+        @keyframes doorAni {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            30% {
+                transform: rotateY(105deg);
+            }
+
+            70% {
+                transform: rotateY(105deg);
+            }
+
+            1000% {
+                transform: rotateY(0deg);
+            }
+        }
+
+        /*키프레임*/
+
+
+        /*심슨*/
+        .simpson {
+            position: absolute;
+            top: 305px;
+            left: 356px;
+            width: 32px;
+
+            animation: simpson 7s ease-in 5s forwards;
+
+
+        }
+
+        /*심슨 애니 키프레임*/
+        @keyframes simpson {
+            0% {
+                top: 305px;
+                left: 356px;
+                width: 32px;
+                transform: rotate(0deg);
+                z-index: 1;
+            }
+
+            5% {
+                /*1.문옆이동*/
+                top: 310px;
+                /*아래로*/
+                left: 346px;
+                /*왼쪽이동*/
+                width: 37px;
+                /*크게*/
+                transform: rotate(-10deg);
+                /*기울임*/
+                z-index: 1;
+            }
+
+            20% {
+                /*2.앞으로 이동*/
+                top: 315px;
+                /*아래로*/
+                left: 346px;
+                /*왼쪽이동*/
+                width: 40px;
+                /*크게*/
+                transform: rotate(10deg);
+                /*기울임*/
+                z-index: 1;
+            }
+
+            30% {
+                /*3.앞으로 이동*/
+                top: 318px;
+                /*아래로*/
+                left: 346px;
+                /*왼쪽이동*/
+                width: 45px;
+                /*크게*/
+                transform: rotate(-10deg);
+                /*기울임*/
+                z-index: 1;
+            }
+
+            40% {
+                /*4.앞으로 이동*/
+                top: 322px;
+                /*아래로*/
+                left: 346px;
+                /*왼쪽이동*/
+                width: 50px;
+                /*크게*/
+                transform: rotate(10deg);
+                /*기울임*/
+                z-index: 1;
+            }
+
+            50% {
+                /*5.앞으로 이동*/
+                top: 325px;
+                /*아래로*/
+                left: 346px;
+                /*왼쪽이동*/
+                width: 55px;
+                /*크게*/
+                transform: rotate(-10deg);
+                /*기울임*/
+                z-index: 1;
+            }
+
+            60% {
+                /*6.앞으로 이동*/
+                top: 335px;
+                /*아래로*/
+                left: 346px;
+                /*왼쪽이동*/
+                width: 65px;
+                /*크게*/
+                transform: rotate(10deg);
+                /*기울임*/
+                z-index: 1;
+            }
+
+            70% {
+                /*7.앞으로 이동*/
+                top: 345px;
+                /*아래로*/
+                left: 346px;
+                /*왼쪽이동*/
+                width: 80px;
+                /*크게*/
+                transform: rotate(-10deg);
+                /*기울임*/
+                z-index: 1;
+            }
+
+            75% {
+                /*8.앞으로 이동*/
+                top: 314px;
+                /*위로*/
+                left: 346px;
+                /*왼쪽이동*/
+                width: 110px;
+                /*크게*/
+                transform: rotate(10deg);
+                /*기울임*/
+                z-index: 1;
+            }
+
+            80% {
+                /*9.앞으로 이동*/
+                top: 290px;
+                /*위로*/
+                left: 346px;
+                /*왼쪽이동*/
+                width: 150px;
+                /*크게*/
+                transform: rotate(-10deg);
+                /*기울임*/
+                z-index: 1;
+            }
+
+            85% {
+                /*10.앞으로 이동*/
+                top: 220px;
+                /*위로*/
+                left: 346px;
+                /*왼쪽이동*/
+                width: 200px;
+                /*크게*/
+                transform: rotate(10deg);
+                /*기울임*/
+                z-index: 1;
+            }
+
+            90% {
+                /*11.앞으로 이동*/
+                top: 200px;
+                /*위로*/
+                left: 346px;
+                /*왼쪽이동*/
+                width: 250px;
+                /*크게*/
+                transform: rotate(-10deg);
+                /*기울임*/
+                z-index: 1;
+            }
+
+            95% {
+                /*12.앞으로 이동*/
+                top: 180px;
+                /*위로*/
+                left: 346px;
+                /*왼쪽이동*/
+                width: 300px;
+                /*크게*/
+                transform: rotate(10deg);
+                /*기울임*/
+                z-index: 1;
+            }
+
+            100% {
+                /*13.앞으로 이동*/
+                top: 169px;
+                /*위로*/
+                left: 309px;
+                /*왼쪽이동*/
+                width: 340px;
+                /*크게*/
+                transform: rotate(0deg);
+                /*기울임*/
+                z-index: 1;
+            }
+
+
+        }
+
+
+        /*말풍선*/
+        .words {
+            position: absolute;
+            top: 34px;
+            left: 196px;
+            width: 300px;
+            height: 200px;
+            border: 10px solid #4e8bf8;
+            background-color: #fff;
+            border-radius: 50%;
+
+            box-sizing: border-box;
+            /*보더,패딩포함 크기유지*/
+
+            font: bold 20px/23px verdana;
+            text-align: center;
+            padding-top: 23px;
+            /*말풍선 안보이게*/
+            opacity: 0;
+            animation: talk 1s ease-in-out 13s forwards;
+        }
+
+        /*말풍선 키프레임*/
+        @keyframes talk {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /*키프레임*/
+
+        .words::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 4px;
+            right: 7px;
+
+            border-top: 20px solid #4e8bf8;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+
+            transform: rotate(-35deg);
+
+        }
+
+        .words::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 11px;
+            right: 13px;
+            height: 5px;
+
+            border-top: 20px solid #fff;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+
+            transform: rotate(-35deg)
+        }
+
+        /*마지*/
+        .marge {
+            position: absolute;
+            bottom: -138px;
+            right: -197px;
+            width: 300px;
+
+            animation: mom 1s ease-in 14s forwards;
+        }
+
+        /*마지 키프레임*/
+        @keyframes mom {
+            to {
+                position: absolute;
+                bottom: -138px;
+                right: -97px;
+                width: 300px;
+                transform: rotate(-20deg);
+            }
+
+        }
+
+        /*키프레임*/
+
+        /*리사*/
+        .risa {
+            position: absolute;
+            top: 0;
+            left: -265px;
+            width: 200px;
+            transform: rotate(90deg);
+            animation: ri 1s ease-in 15s forwards;
+        }
+
+        /*리사키프레임*/
+        @keyframes ri {
+            to {
+                position: absolute;
+                top: 0;
+                left: -65px;
+                width: 200px;
+                transform: rotate(90deg);
+            }
+        }
+
+        /*키프레임*/
+
+
+        /*매기*/
+        .maggie {
+            position: absolute;
+            width: 200px;
+            bottom: -270px;
+            left: 200px;
+            animation: baby .6s ease-in-out 14s forwards, updown .4s ease-in-out 14.6s infinite alternate, comego 10s ease-in-out 20s infinite alternate;
+        }
+
+        @keyframes baby {
+            100% {
+
+                bottom: -70px;
+            }
+        }
+
+        /*키프레임*/
+
+        @keyframes updown {
+            to {
+                bottom: -70px;
+            }
+
+            from {
+                bottom: -80px;
+
+            }
+
+        }
+
+        /*키프레임*/
+
+        @keyframes comego {
+            0% {
+
+                left: 200px;
+            }
+
+            40% {
+                left: 50px;
+            }
+
+            100% {
+                left: 600px;
+            }
+
+        }
+
+
+
+
+        /*바트*/
+        .bart {
+            position: absolute;
+            top: -390px;
+            right: 60px;
+            width: 250px;
+            transform: rotate(180deg);
+            animation: son .5s ease-out 16s forwards, falling .4s ease-in 18s forwards;
+        }
+        
+        @keyframes son{
+            100%{top: -90px;}
+        }
+        @keyframes falling{
+            0%{top: -90px;
+            transform: rotate(180deg);}
+            100%{
+                top:530px;
+                transform: rotate(10deg);
+                    
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--전체화면박스-->
+    <div class="house">
+        <!--심슨-->
+        <img class="simpson" src="images/simpson.png" alt="심슨">
+        <!--문짝-->
+        <img class="door" src="images/door.png" alt="문짝">
+
+        <!--말풍선-->
+        <div class="words">
+            Hi!Everyone <br>
+            My Name is Simpson! <br>
+            This is My House.<br> It's Fantastic! <br>
+            I LOVE MY FAMILY!!!
+        </div>
+
+        <!--마지-->
+        <img class="marge" src="images/Marge_Simpson.png" alt="마지">
+        <!--리사-->
+        <img class="risa" src="images/Lisa_Simpson.png" alt="리사">
+        <!--매기-->
+        <img class="maggie" src="images/Maggie_Simpson.png" alt="매기">
+        <!--바트-->
+        <img class="bart" src="images/Bart_Simpson.png" alt="바트">
+
+
+    </div>
+
+
+</body></html>

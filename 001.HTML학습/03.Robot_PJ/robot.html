@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>robot</title>
+    <style>
+        body {
+            background: url(images/bg.jpg) no-repeat fixed top/cover;
+        }
+
+        div {
+            /*outline: 2px solid lime;*/
+        }
+
+        /*로봇머리*/
+        #head {
+            position: relative;
+            /*부모자격-자식요소가 absolute인것의 부모*/
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+            background: url(images/metal01_250x250.jpg) no-repeat center/cover;
+        }
+
+        /*왼눈*/
+        #eye1 {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 50px;
+            height: 50px;
+            background: url(images/e1.jpg) no-repeat 0/100% 100%
+        }
+
+        /*오른눈*/
+        #eye2 {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            width: 50px;
+            height: 50px;
+            background: url(images/e2.jpg) no-repeat 0/100% 100%
+        }
+
+        /*코*/
+        #nose {
+            position: absolute;
+            width: 50px;
+            height: 70px;
+            top: 107px;
+            right: 100px;
+            background: url(images/nose.jpg) no-repeat 0/110% 100%;
+        }
+
+        /*입*/
+
+        #mouth {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 0;
+            right: 70px;
+            background: url(images/mouth.png) no-repeat 0/100% 100%;
+
+        }
+
+        /*귀공통*/
+        .ear {
+            position: absolute;
+            width: 50px;
+            height: 80px;
+            background: url(images/metal02.jpg) no-repeat 0/100% 100%
+        }
+
+        /*왼귀*/
+        #ear1 {
+            top: 85px;
+            left: -52px;
+        }
+
+        /*오른쪽*/
+        #ear2 {
+            top: 85px;
+            right: -52px;
+        }
+
+
+        /*  ************************************************************/
+        /*로봇몸통*/
+        #body {
+            position: relative;
+            /*부모*/
+            top: 50px;
+            /*목크기만큼 아래쪽으로*/
+            width: 250px;
+            height: 300px;
+            margin: 0 auto;
+            /*마영오-가로중앙*/
+            background: url(images/metal01_250x250.jpg) no-repeat center/cover;
+        }
+
+
+        .part {
+            position: absolute;
+            width: 50px;
+            height: 220px;
+            background: url(images/metal02.jpg) repeat 0/100% 25%;
+        }
+
+        #arm1 {
+            top: 0px;
+            left: -50px;
+        }
+
+        #arm2 {
+            top: 0px;
+            right: -50px;
+        }
+
+        #leg1 {
+            top: 300px;
+            left: 0px;
+        }
+
+        #leg2 {
+            top: 300px;
+            right: 0px;
+        }
+
+        #tv {
+            position: absolute;
+            top: 38px;
+            right: 10px;
+            width: 229px;
+            height: 185px;
+            background: url(images/tv.jpg) no-repeat 0/100% 100%;
+
+
+        }
+
+        #neck {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: -50px;
+            left: 100px;
+            background: url(images/metal02.jpg) no-repeat 0/100% 100%;
+
+        }
+
+        #screen {
+            position: absolute;
+            top: 20px;
+            left: 12px;
+            width: 162px;
+            height: 132px;
+            /*나의 부모는 누구인가? #vt */
+            background-color: #0a0909;
+            border-radius: 18px;
+            overflow: hidden;
+
+
+        }
+
+        /*스크린 iframe*/
+        #screen>iframe {
+            position: absolute;
+            top: -30px;
+            left: 0px;
+            width: -350px;
+            height: 200px;
+            border: none;
+            /*iframe에 기본 보더 없애기*/
+
+
+        }
+    </style>
+
+
+
+
+
+
+</head>
+
+
+
+
+
+<body>
+    <!--ㄹ로봇머리-->
+    <!--#head>#eye1+#eye2+#nose+#mouth+#ear1+#ear2-->
+    <div id="head">
+        <div id="eye1"></div>
+        <div id="eye2"></div>
+        <div id="nose"></div>
+        <div id="mouth"></div>
+        <div id="ear1" class="ear"></div>
+        <div id="ear2" class="ear"></div>
+    </div>
+
+    <!--로봇몸통-->
+    <!--#body>#neck+#arm1+#arm2+#leg1+#leg2+#tv-->
+    <div id="body">
+        <div id="neck"></div>
+        <div id="arm1" class="part"></div>
+        <div id="arm2" class="part"></div>
+        <div id="leg1" class="part"></div>
+        <div id="leg2" class="part"></div>
+        <div id="tv">
+            <div id="screen">
+                <iframe src="https://www.youtube.com/embed/ExYkx5Qlt2A?autoplay=1" frameborder="0"></iframe>
+
+            </div>
+        </div>
+    </div>
+
+    <!--아이프레임: iframe요소
+-타시스템의 화면을 웹사잍트에 삽입하는 경우 사용하는 인라인 프레임이다
+
+inline frame 을 줄여서 iframe 이라 한다
+
+ -src 속성: 동일 시스템의 다른 화면이나 타 시스템의 화면을 불러오는 속성
+ (동일 시스템은 경로만 씀, 타 시스템은 전체 url을 써준다!) 
+-->
+
+    <!--로봇 소개글-->
+    <div id="rdesc"></div>
+    <h2>로봇소개글</h2>
+    <small>
+        [네이버 지식백과] 로봇 [Robot] (물리학백과)</small>
+    <p>
+        로봇은 어떤 작업이나 조작을 자동으로 할 수 있는 기계 장치이다. 로봇은 외부의 제어 장치에 의해 조종되거나 제어 장치가 내장될 수도 있다.<br> 로봇은 인간의 모습을 가지도록 만들어질 수 있지만 대부분의 로봇은 어떻게 보이는지와 상관없이 작업을 수행하도록 설계된다. 그림 1은 인간의 모습을 닮은 미국 로봇 업체 보스턴 다이내믹스에서 제작한 아틀라스(Atlas) 로봇을 보여준다. 로봇은 살아있는 것처럼 형태를 흉내 내거나 동작을 자동화시켜서 지능을 가지고 있거나 스스로 사고한다는 느낌을 줄 수 있다. 컴퓨터에 의한 정보 처리와 실제의 기계적 움직임을 결부시켜 로봇 제작을 연구하는 학문이 로봇공학(robotics)이다<br>
+        로봇은 인간을 보낼 수 없는 장소에서도 작업이 가능하기 때문에 우주 공간에서의 작업과 우주 탐험에 이상적이라고 할 수 있다.<br> 로봇은 지구를 돌고 있는 인공위성을 수리하거나 유지하는 데에도 사용된다. 우주 탐험에서 로봇은 보이저호와 같이 먼 천체까지 비행하여 탐사와 발견을 수행할 수 있다. 관찰한 데이터를 수집하여 지구로 보내거나 표본을 획득한 뒤 분석할 수도 있고 스스로 간단한 결정을 내릴 수도 있다. 그림 2는 그러한 로봇의 대표적인 사례인 미국항공우주국(NASA)이 화성에 보낸 탐사로봇 로버(Rover)를 보여준다. 로봇에 대한 의존도는 증가하고 있다.
+
+    </p>
+
+
+
+
+
+</body></html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>css 가상요소</title>
+    <style>
+        /*
+    가상요소란?
+    (pseudo-element:슈도엘러먼트)
+    :데이터를 담을수 있는 요소일 경우
+    맨 앞 과 맨 뒤에 이미지나 글자를 넣을수 있고 
+    또한 첫글자나 첫째줄에 디자인을 마치 요소를 넣은것 처럼
+    디자인을 변경 할수 있는 css 요소추가 방법이다
+        실제로 태그(요소)를 넣지 않고도 넣은것 처럼
+        쓰기 때문에 가상요소라고 부른다
+        
+        1.::before->클론을 두개 겹쳐쓰고 bofore라고 쓰면 요소의 맨앞에 무엇인가가 추가된다
+        2.::after->요소의 맨위데 무엇인가가 추가된다
+        ->필수 속성
+        content:문자 / url(이미지경로)
+        ->이것을 셋팅하는 순간 맨앞/맨뒤에 span태그를 넣은것처럼 생각 한다!
+        (이미지경로를 넣으면 이미지태그)
+    */
+        /*맨앞추가 가상요소:before*/
+
+        h2:before {
+            content: url(imgs/blogo.png);
+            /*이미지를 직접불러오면 크기조정 안됨*/
+            margin-right: 20px;
+            /*인라인요소의 오른쪽 인라이의세로위치설정*/
+            vertical-align: middle
+                /*사용값: top /bottum /middle/px값*/
+        }
+
+        /*맨뒤추가 가상요소: after*/
+
+        h2:after {
+            content: "";
+            /*빈칸을 쓰면 빈span태그 쓴것 같아요*/
+            /*크기디자인 병걍위해 display변경*/
+            display: inline-block;
+            /*인라인 블럭은 크기적용되고 한줄에 나옴!*/
+            width: 50px;
+            height: 25px;
+            /*배경넣기*/
+            background-color: #f7f8f8;
+            background-image: url(imgs/blogo.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            /*위치변경*/
+            margin: 10px;
+            /*왼쪽바깥여백*/
+            vertical-align: -12px;
+            /*인라인요소세로위치*/
+
+
+        }
+
+
+
+        dl {
+            font-size: 24px;
+            margin-left: 50px;
+        }
+
+        dt::before {
+            content: "♣";
+            color: red;
+            vertical-align: 3px;
+
+        }
+
+        dd:before {
+            content: "♥";
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>css가상요소</h1>
+
+    <h2>[드라마 "도깨비"제작발표회]</h2>
+    <dl>
+        <dt>등장인물</dt>
+        <dd>김신</dd>
+        <dd>저승사자</dd>
+        <dd>지은탁</dd>
+        <dd>써니</dd>
+        <dd>유덕화</dd>
+
+        <dt>출연배우</dt>
+        <dd>공유</dd>
+        <dd>이동욱</dd>
+        <dd>김고은</dd>
+        <dd>유인나</dd>
+        <dd>육성재</dd>
+
+        <dt>OST 아티스트</dt>
+        <dd>헤이즈</dd>
+        <dd>마마무</dd>
+        <dd>찬열,펀치</dd>
+    </dl>
+
+
+</body></html>

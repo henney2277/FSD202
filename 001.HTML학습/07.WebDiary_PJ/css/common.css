@@ -1,0 +1,10 @@
+@charset "utf-8";
+ /*웹 다이러리 공통 css - common.css*/
+
+/*공통 class*/
+.bld{/*IR( 배경이미지설명 숨기기)*/
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>한국 최신 드라마 리스트</title>
+    <style>
+        /*테이블 공통 디자인*/
+
+        .tbl {
+            /*글자체*/
+            font-family: "궁서체", "굴림";
+            /*글자크기*/
+            font-size: 14px;
+            /*글자색*/
+            color: #222;
+            /*테이블에는 기본적으로 간극이 존재한다
+            이것을 boder-collapse로 없애야한다*/
+            border-collapse: collapse;
+            margin: 0 auto;
+            /*테이블도 마영오가 된다*/
+        }
+
+
+        .tbl td {
+            border: 1px;
+
+            /*테이블 중앙정렬*/
+        }
+
+        /*개별테이블*/
+        #drama caption {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+
+        /*테이블도 마영오가 된다*/
+        /**/
+
+        #drama td,#drama th {
+            padding: 5px 10px;
+          
+            
+        }
+
+        /*td에 밑줄넣기*/
+        #drama tbody tr td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+
+        }
+
+        /*boder는 경계선
+        따로 설정시엔
+        boder-width
+        boder-style
+        boder-color
+        
+        한번에 bode: 두께 종류 색상; */
+    </style>
+</head>
+
+<body>
+    <!--한국 최신 드라마 리스트 테이블-->
+    <table id="drama" class="tbl">
+        <!--테이블 제목-->
+        <caption>한국 최신 드라마 리스트</caption>
+        <!--테이블 머릿줄-->
+        <thead>
+            <tr>
+                <!--머릿글은 td대신 th를 씀-->
+                <th>번호</th>
+                <th>드라마명</th>
+                <th>주연</th>
+                <th>제작사</th>
+                <th>구분</th>
+                <th>방영시간</th>
+                <th>방영횟수</th>
+            </tr>
+        </thead>
+        <!--테이블 끝줄-->
+        <tfoot>
+            <tr>
+                <td colspan="7">
+                    ◀ 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 ▶
+                </td>
+                <!--colspan은 기본적으로 td를 합칠때 사용함
+                상단td의 갯수가 7개이고 이것을 합치려면
+                7개를 성정해서 하나로 통합한다-->
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>써치</td>
+                <td>장동윤,정수정</td>
+                <td>ocn</td>
+                <td>토일</td>
+                <td>오후10:30</td>
+                <td>10부작</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>산후조리원</td>
+                <td>엄지원,박하선</td>
+                <td>tvn</td>
+                <td>월화</td>
+                <td>오후 9:00</td>
+                <td>8부작</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>날아라개</td>
+                <td>권상우.배성우</td>
+                <td>sbs</td>
+                <td>금토</td>
+                <td>오후10:00</td>
+                <td>10부작</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>써치</td>
+                <td>장동윤,정수정</td>
+                <td>ocn</td>
+                <td>토일</td>
+                <td>오후10:30</td>
+                <td>10부작</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>날아라개천용</td>
+                <td>권상우.배성우</td>
+                <td>sbs</td>
+                <td>금토</td>
+                <td>오후10:00</td>
+                <td>10부작</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>날아라개천용</td>
+                <td>권상우.배성우</td>
+                <td>sbs</td>
+                <td>금토</td>
+                <td>오후10:00</td>
+                <td>10부작</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>날아라개천용</td>
+                <td>권상우.배성우</td>
+                <td>sbs</td>
+                <td>금토</td>
+                <td>오후10:00</td>
+                <td>10부작</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>날아라개천용</td>
+                <td>권상우.배성우</td>
+                <td>sbs</td>
+                <td>금토</td>
+                <td>오후10:00</td>
+                <td>10부작</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>날아라개천용</td>
+                <td>권상우.배성우</td>
+                <td>sbs</td>
+                <td>금토</td>
+                <td>오후10:00</td>
+                <td>10부작</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>날아라개천용</td>
+                <td>권상우.배성우</td>
+                <td>sbs</td>
+                <td>금토</td>
+                <td>오후10:00</td>
+                <td>10부작</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <!--
+[테이블 관련요소]
+1.table : 전체 테이블 부모
+2.tr (table row) : 테이블 라인
+3,td (table data): 테이블 데이터
+-thead에서는 주로 td 대신 th를 사용함
+(th는 기본 두꺼운글짜 중앙정렬함)
+*********************************
+(추가요소)
+4.caption:테이블 제목
+5.thead: 테이블 머릿부분
+6.tbody:테이블 중앙내용부분
+.tfoot:테이블 하단부분
+-->
+</body></html>

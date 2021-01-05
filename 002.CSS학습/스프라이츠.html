@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS심화-Sprites,IR</title>
+    <style>
+    
+        #icons{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;/*3無*/
+        }
+        #icons:after{
+            content: "";
+            display: block;
+            clear: both;/*float해제*/
+        }
+        #icons li{
+            float: left;
+            width: 128px;
+            height: 128px;
+            outline: 1px solid red;
+            background: url(images/icons.png) no-repeat;
+        }
+        /*트위터*/
+        #icons li:first-child{
+            background-position: 0 0;
+            
+        }
+        /*트위터 마우스 오버시;*/
+        #icons li:first-child:hover{
+            background-position: 0 -128px;
+            
+        }
+        
+        /*인스타*/
+        #icons li:nth-child(2){
+            background-position: -128px 0px;
+            
+        }
+        /*인스타 마우스 오버시*/
+        #icons li:nth-child(2):hover{
+            background-position: -128px -128px;
+        }
+        
+        /*페북*/
+        #icons li:last-child{
+            background-position: -256px 0px;
+            
+            
+        }
+        /*페북 마우스 오버시*/
+        #icons li:last-child:hover{
+            background-position: -256px -128px;
+        }
+        
+        
+        #icons a{/*a태그 확장*/
+            display: block;/*디자인적용위*/
+            width: 100%;
+            height: 100%;
+        }
+       
+       
+        .bld{
+            display: block;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+   <ul id="icons">
+       <li>
+           <a href="#">
+              <span class="bld">트위터 바로가기</span>
+               
+           </a>
+       </li>
+       <li>
+           <a href="#">
+             <span class="bld">인스타그램 바로가기</span>
+              
+               
+           </a>
+       </li>
+       <li>
+           <a href="#">
+              <span class="bld">페이스북 바로가기</span>
+               
+           </a>
+       </li>
+   </ul>
+   
+</body>
+</html>

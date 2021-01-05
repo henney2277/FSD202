@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>블록요소의 정렬</title>
+    <style>
+        /*큰박스*/
+        .bx {
+            margin: 5px; 
+            padding: 15px;
+            border:5px dashed blue
+        }
+
+        /*작은박스*/
+        .sbx {
+            width: 200px;
+            height: 200px;
+            background-image: url(imgs/dc1.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: aqua;
+            background-size: 300px
+                /*배경이미지 사이즈에서 숫자를 하나만 쓰면 가로크기이며
+                세로크기는 auto로 세팅된다*/
+            
+        }
+        
+        /*두번째 작은박스*/
+        .sbx2{
+            background-color: rgba(255, 162, 35, 0.93);
+            background-image: url(imgs/dc2.png);
+            /*블록박스 중앙정렬 - 마영오*/
+            margin: 0 auto;
+        }
+        
+        /*세번째 작은박스*/
+        .sbx3{
+            background-color: #392e2e;
+            background-image: url(imgs/dc3.png);
+            /*블록박스 오른쪽 정렬*/
+            margin-left: auto
+        }
+        /*인라인 핱트 오른쪽 끝으로 보내기*/
+        h1 span{
+        float:right;/*인라인 플로트 오른쪽 보내기*/
+            margin-right: 50px;
+            color:  red;
+        }
+        
+        
+    </style>
+
+</head>
+
+<body>
+    <h1>블록요소의 정렬
+    <span>♥♥♥♥♥♥♥♥</span>
+    </h1>
+    <div class="bx">
+        <div class="sbx sbx1"></div>
+    </div>
+    <div class="bx">
+        <div class="sbx sbx2"></div>
+    </div>
+    <div class="bx">
+        <div class="sbx sbx3"></div>
+    </div>
+</body></html>

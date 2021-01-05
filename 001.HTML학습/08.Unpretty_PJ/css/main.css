@@ -1,0 +1,310 @@
+@charset"utf-8";
+
+/*언프리티 메인 페이지 css -main.css*/
+/*공통*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+}
+
+/*공통class*/
+.dn {
+    /*안보임처리*/
+    /* display: none;*/
+}
+
+.bld {
+    /*IR*/
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/*디자인 검수용*/
+#dsn {
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    transform: translate(-50%);
+    /*가로방향 정중앙*/
+    opacity: .5;
+    z-index: 10;
+    display:none;
+
+}
+
+/*전체박스*/
+.wrap {
+    position: relative;
+    /*부모자격을 주고 시작한다*/
+    width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+    background: url(../images/bg.jpg) no-repeat;
+}
+
+/*로고박스*/
+.logo {
+    position: absolute;
+    /*위치 안주면 제틀 가만히 크기 안주면 내용만큼*/
+    top: 20px;
+    /*나의부모는?.wrap*/
+    width: 96%;
+    /*가로크기를 부모박스 끝까지*/
+    left: 2%
+}
+
+/*두번째로고 오른쪽 끝으로*/
+.logo img:last-child {
+    float: right;
+}
+
+/*메인로고*/
+#mlogo {
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+/*랩퍼컨텐츠 박스*/
+.cont {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/*랩퍼박스 공통*/
+.rapper {
+    position: absolute;
+    /*부모는?.cont*/
+    width: 170px;
+    height: 170px;
+    border: 10px solid #ccc;
+    border-radius: 50%;
+    box-sizing: border-box;
+    /*보더,패딩을 포함하는 박스*/
+
+/*배경셋팅*/
+    background-color: #000;
+    background-image: url(../images/tv3_small.png);
+    background-repeat: no-repeat;
+    background-position: center 150px;
+    background-size: 160px;
+    
+    /*트랜지션: 속시이지*/
+    transition: background-position .4s ease-out;
+}
+
+/* 래퍼박스에 마우스 오버시 배경tv이미지 올라오기*/
+.rapper:hover{
+    background-position: center 5px;
+}
+
+/*뮤지션 공통*/
+.mu {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    /*부모내부 보더만큼이동*/
+    /*부모? .rapper*/
+    width: 100%;
+    height: 100%;
+
+    /*배경설정*/
+    background-color: #000;
+    background-repeat: no-repeat;
+
+
+    /*배경개별설정*/
+    border: 10px solid #ccc;
+    border-radius: 50%;
+
+    /*트랜지션:속시이지*/
+    transition: all .4s ease-out;
+}
+
+/*랩퍼박스에 마우스 오버시 자식(.mu)요소 변경하기*/
+.rapper:hover .mu {
+    width: 220px;
+    height: 500px;
+    border-radius: 7px;
+}
+
+/*개별래퍼셋팅*/
+
+/*1애쉬비*/
+.r1 {
+    /*래퍼개별위치값*/
+    top: 19px;
+    left: 417px;
+}
+
+.r1 .mu {
+    background-image: url(../images/01ash-b.png);
+    background-position: -32px 13px;
+    background-size: 202px;
+}
+
+/*래퍼박스에 마우스 오버시 자식요소(.mu)  개별위치 설정하기*/
+
+.r1:hover .mu {
+    top: 214px;
+    left: -46px;
+    background-position: 0px 20px;
+    background-size: 100%;
+}
+
+
+
+/*2액시*/
+/*래퍼개별위치값*/
+.r2 {
+    top: 69px;
+    right: 161px;
+}
+
+.r2 .mu {
+    background-image: url(../images/01EXY.png);
+    background-position: -33px 19px;
+    background-size: 203px;
+}
+
+.r2:hover .mu {
+    top: 163px;
+    left: -298px;
+    background-position: 0px 0px;
+    background-size: 100%;
+}
+
+
+/*3헤이즈*/
+.r3 {
+    /*래퍼개별위치값*/
+    top: 289px;
+    right: 20px;
+}
+
+.r3 .mu {
+    background-image: url(../images/01heize.png);
+    background-position: -22px -6px;
+    background-size: 192px;
+}
+
+.r3:hover .mu {
+    top: -57px;
+    left: -441px;
+    background-position: 16px 17px;
+    background-size: 189px;
+}
+
+/*4효린*/
+.r4 {
+    /*래퍼개별위치값*/
+    bottom: 298px;
+    right: 20px;
+}
+
+.r4 .mu {
+    background-image: url(../images/01hyorin.png);
+    background-position: -25px -5px;
+    background-size: 225px;
+}
+.r4:hover .mu {
+    top: -57px;
+    left: -441px;
+    background-position: 2px 14px;
+    background-size: 230px;}
+
+/*5전지윤*/
+.r5 {
+    /*래퍼개별위치값*/
+    bottom: 69px;
+    right: 161px;
+}
+
+.r5 .mu {
+    background-image: url(../images/01jenyer.png);
+    background-position: -77px -3px;
+    background-size: 260px;
+}
+.r5:hover .mu {
+    top: -57px;
+    left: -441px;
+    background-position: 16px 17px;
+    background-size: 189px;}
+
+/*6캐스퍼*/
+.r6 {
+    /*래퍼개별위치값*/
+    bottom: 21px;
+    left: 416px;
+}
+
+.r6 .mu {
+    background-image: url(../images/01kasper.png);
+    background-position: -44px 0px;
+    background-size: 246px;
+}
+
+/*7키디비*/
+.r7 {
+    /*래퍼개별위치값*/
+    bottom: 69px;
+    left: 161px;
+}
+
+.r7 .mu {
+    background-image: url(../images/01kittib.png);
+    background-position: -30px 0px;
+    background-size: 241px;
+}
+
+/*8수아*/
+.r8 {
+    /*래퍼개별위치값*/
+    bottom: 298px;
+    left: 20px;
+}
+
+.r8 .mu {
+    background-image: url(../images/01sua.png);
+    background-position: -40px 3px;
+    background-size: 217px;
+
+}
+
+/*9트루디*/
+.r9 {
+    /*래퍼개별위치값*/
+    bottom: 542px;
+    left: 20px;
+}
+
+.r9 .mu {
+    background-image: url(../images/01truedy.png);
+    background-position: -40px -55px;
+    background-size: 217px;
+
+}
+
+/*10유빈*/
+.r10 {
+    /*래퍼개별위치값*/
+    top: 69px;
+    left: 161px;
+}
+
+.r10 .mu {
+    background-image: url(../images/01yubin.png);
+    background-position: -75px 10px;
+    background-size: 258px;
+}

@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="네이버뉴스중 오늘의 뉴스를 요약하여 보여줍니다!">
+    <title>요약뉴스</title>
+    <style>
+        div {
+            /*div는 블록 박스다*/
+            width: 700px;
+            margin: 0 auto;
+            /*마진 위아래는 0, 양쪽은 자동*/
+            /*크기를 가진 블록 박스가 중앙에온다*/
+        }
+
+
+        /*        span{/* 글짜색 : 색값 ;*/
+        color: aqua;
+        }
+
+        /*css주석
+
+        /*선택요소명{
+    속성명: 값;
+        }*/
+
+    </style>
+
+    <!--style요소 : html문서 내부에 사용할 스타일 시트를 코딩하는 영역이다(인터널방식)
+    -style요소 영역은 html이 아닌css문법영역임!(절대 태그를쓰면 안됨!)-->
+</head>
+
+<body>
+    <!--1.상단부분-->
+    <div>
+        <!--1-1. 큰제목-->
+        <h1>내이바 요약 뉴스</h1>
+        <!--h1요소는 한문서안에 하나만 사용하자-->
+        <!--1-2.메뉴-->
+        <h2>
+            <a href="index.html" style="text-decoration: none">
+                <img src="images/logo.png" alt="네이버로고" style="width:100px; vertical-align: middle;">
+                <!--style 속성: 모든요소에 사용가능
+            -속성명: 값;
+            -css 속성을 셋ㅌ팅 할수 있다
+            -css 인라인 셋팅(코딩)이라고 한다-->
+            </a>
+
+            <a href="sub_1.html" style="text-decoration: none">정치</a> |
+            <a href="sub_2.html" style="text-decoration: none">경제</a> |
+            <a href="sub_3.html" style="text-decoration: none">사회</a> |
+            <a href="sub_4.html" style="text-decoration: none">스포츠</a> |
+            <a href="sub_5.html" style="text-decoration: none">IT/과학</a> |
+        </h2>
+        <hr>
+        <!--hr은 수평선을 뜻한다 -->
+    </div>
+    <!--div 요소: 내용을 구분하는 블럭요소(다른내용을 옆에 오지 못하게 막아준다__랩핑했다~고 함-->
+    <!--2.중앙내용-->
+    <div>
+        <img src="images/main.jpg" alt="뉴스메인이지" style="width:  100%">
+        <!--img요소 : 이미지를 불러오는 요소
+        -src 속성: 불러오는 경로 셋팅
+        -alt 속성 : 이미지 설명(웹 접근성 필수!)-->
+    </div>
+    <!--3.하단부분-->
+    <div>
+        <hr>
+        <!--구분선-->
+        <h3>정치뉴스</h3>
+        <ol>
+
+            <li>
+                <a href="https://news.naver.com/main/ranking/read.nhn?mid=etc&sid1=111&rankingType=popular_day&oid=025&aid=0003045684&date=20201022&type=1&rankingSeq=1&rankingSectionId=100" target="blank" style="text-decoration: none">윤석열, 아내 재산 캐묻자 "오십 넘어 한 결혼…답변 </a>
+            </li>
+            <li>
+                <a href="https://news.naver.com/main/ranking/read.nhn?mid=etc&sid1=111&rankingType=popular_day&oid=023&aid=0003570579&date=20201022&type=1&rankingSeq=3&rankingSectionId=100" target="blank" style="text-decoration: none">"윤석열 똑바로 앉아라” 다그친 박범계, 과거엔 “형은</a>
+            </li>
+            <li>
+                <a href="https://news.naver.com/main/ranking/read.nhn?mid=etc&sid1=111&rankingType=popular_day&oid=437&aid=0000250395&date=20201022&type=2&rankingSeq=8&rankingSectionId=100" target="blank" style="text-decoration: none">[현장영상] 윤석열 "총장, 장관 부하 아냐"…거취 질문</a>
+            </li>
+        </ol>
+
+        <h3>경제뉴스</h3>
+        <ol>
+            <li><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=437&aid=0000250407" target="_blank" style="text-decoration: none">
+                    또 숨진 택배노동자…고개숙인 CJ대한통운 "4000명 투입"</a></li>
+            <li><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=421&aid=0004944164" target="_blank" style="text-decoration: none">13번째 택배기사 사망에…CJ대한통운 "분류작업에 4000명 투입"(상보)
+                </a></li>
+            <li><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=001&aid=0011963681" target="_blank" style="text-decoration: none">연합뉴스 10이상+
+                    CJ대한통운 "분류지원 4천명 투입해 택배기사 근무 단축"</a></li>
+        </ol>
+
+        <h3>분야별뉴스</h3>
+        <dl>
+            <dt>경제</dt>
+            <dd>
+                <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=015&aid=0004436130" style="text-decoration: none">
+                    베트남 총리 또 이재용에 "삼성 반도체공장 지어달라" 요청</a>
+
+            </dd>
+            <dd>
+                <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=015&aid=0004436143" style="text-decoration: none">아무도 모르는 대주주 '3억원' 기준…정부는 강행</a>
+
+            </dd>
+
+            <dt>사회</dt>
+            <dd>
+                <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=015&aid=0004436125" style="text-decoration: none">'무기징역 구형' 조주빈 측 "사회적 환경 고려해달라" 호소</a>
+
+            </dd>
+            <dd>
+                <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=018&aid=0004766292" style="text-decoration: none">'삼성 불법승계 의혹' 첫 재판, 이재용 "檢 공소사실, 전혀 인정할 수 없어"</a>
+
+            </dd>
+            <dt>IT/과학</dt>
+            <dd>
+                <a href="
+https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=105&oid=092&aid=0002202718" style="text-decoration: none">애플, 프랑스에선 '아이폰12'에 이어폰 준다</a>
+
+            </dd>
+            <dd>
+                <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=105&oid=417&aid=0000608701" style="text-decoration: none">"1억 내기 싫어ㅠㅠ"… 애플, 프랑스 '아이폰12'엔 이어팟 포함?</a>
+
+            </dd>
+
+        </dl>
+        <h3>영상</h3>
+        <span class="mask"></span>
+        <h3>이강인 근항</h3>
+        <a href="https://sports.news.naver.com/video.nhn?category=wfootballlesson&id=730733">
+            <img width="260" height="156" src="https://dthumb-phinf.pstatic.net/?twidth=260&amp;theight=156&amp;opts=12&amp;qlt=95&amp;src=https://phinf.pstatic.net/tvcast/20201021_37/cTOiu_160326108404034CQW_JPEG/1603260978613.jpg" class="imageLazyLoad" lazy-src="https://dthumb-phinf.pstatic.net/?twidth=260&amp;theight=156&amp;opts=12&amp;qlt=95&amp;src=https://phinf.pstatic.net/tvcast/20201021_37/cTOiu_160326108404034CQW_JPEG/1603260978613.jpg" alt="이강인 근항 영상"></a>
+
+        <h3>헤드라인뉴스</h3>
+        <ul>
+            <li><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=025&aid=0003045724" target="_blank" style="text-decoration: none">"꽃게 사야할 돈까지 도박으로 날렸다" 해경, '자진 월북' 결론 </a></li>
+            <li><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=003&aid=0010142170" target="_blank" style="text-decoration: none">'삼성 합병' 이재용, 첫 재판…"검찰 공소사실 인정못해" </a></li>
+            <li><a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=023&aid=0003570590" target="_blank" style="text-decoration: none">성주 사드기지 장비 반입 저지 시위대 3시간만에 해산</a></li>
+        </ul>
+
+        <!--주소-->
+        <address>
+            서울시 강동구 천호동 동원빌딩 5층
+            <br>
+            <!--br은 개행-->
+            대표 : jacop na
+            <br>
+            tel: 02-444-4444
+
+        </address>
+    </div>
+</body>
+
+</html>

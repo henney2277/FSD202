@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>for문 연습2 - 쇼핑몰 이미지 넣기</title>
+    
+    <style>
+        #cont{
+            border: 3px solid #ccc;
+            padding: 5px;
+        }
+        #cont img{
+            width: 100px;
+            padding: 5px;
+        }
+    </style>
+    
+    <script>
+        
+        /*JS는 코드를 만나자마자 실행한다
+        따라서 html body요소보다 위에 코딩된 JS에서
+        특정 요소를 선택하면 아직 그려지기 전이므로
+        null에 셋팅할수없다는 에러메세지가 뜬다!
+            "Uncaught TypeError: Cannot set property 'innerHTML' of null"
+        
+        에러없이 바로실행하게 하려면
+        이 코드가 html로딩후에 실행하게 하면 된다!
+        이때 사용하는 로딩후 실행구역은 아래와 같다
+        
+        로딩후 실행구역1:
+        window.onload=function(){실행코드};
+        -단점: 이코드는 html안에서 단 한번만 사용가능 
+        
+        로딩후 실행구역2:
+        window.addEventListener=("load",function(){};
+        -여러번 사용할수있는 코드사용구역
+        -addEventListener(이벤트,함수)
+        ->특정 이벤트와 함수를 연결해주는 JS메서드
+        -load는 로딩후 발생하는 이벤트
+        -function(){} 익명함수는 실행되지않고 코드를 가지고 있는 코드 저장구역*/
+        
+        ////////////////load 구역////////////////
+        window.addEventListener("load",function(){
+            //console.log("로딩완료");
+            //이미지 넣기
+        //대상:#cont
+        var tg=document.getElementById("cont");
+            
+            for(var i=1;i<=50;i++){
+    
+        //이미지 요소넣기
+        tg.innerHTML+='<img src="images/dress/'+i+'.jpg" alt="여성의류 원피스" title="WDO-201">';
+            }//////////for문//////////
+        });////////////////////load구역///////////////////////
+        //////////////////////////////////////////////////////
+        
+        
+
+    </script>
+    
+</head>
+<body>
+    <!--이미지 넣을 박스-->
+    <div id="cont">
+        <!--<img src="images/dress/1.jpg" alt="여성의류 원피스" title="WDO-201">-->
+    </div>
+</body>
+</html>

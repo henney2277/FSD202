@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Door 
+    - CSS3 : 3D Perspective Animation</title>
+    <style>
+        body{
+            background-color: #9C0;
+        }
+        /*문전체부모*/
+        .cont{
+            position: relative;
+            top: 100px;
+            width: 200px;
+            height: 300px;
+            margin: 0 auto;/*마영오*/
+            background-color: #900;
+        }
+        /*문열었을때 뚫린부분*/
+        .frame{
+            position: relative;
+            top: 20px;
+            width: 150px;
+            height: 280px;
+            margin: 0 auto;
+            background: url(images/seashore.jpg) no-repeat center/auto 100%;
+            /*
+            [ 3D 원근설정 ]
+            1. 셋팅위치: 3D원근설정을 할 대상의 부모박스에 셋팅
+            2. 설정방법:
+            perspective: 수치;
+            - 수치는 px단위로 숫자가 클수록
+            소실점이 먼것이므로 각도가 작아짐(기준점에서 소실점까지의 거리)
+            */
+            perspective: 480px;
+            
+            animation: sea 5s ease-in-out infinite alternate;
+            
+        }
+        /*프레임 배경 바다 애니메이션*/
+        @keyframes sea{
+            to{background-size: auto 150%;}
+        }/*키프레임*/
+        
+        
+        /*문짝*/
+        .door{
+            position: relative;
+            /*부모자격-손잡이*/
+            width: 150px;
+            height: 280px;
+            background-color: #C90;
+            
+            /*문짝회전하기*/
+            transform: rotateY(65deg);
+            /*회전기준변경하기*/
+            transform-origin: left;
+            /*
+            회전기준선 변경하기
+            transform-origin: 가로 세로;
+            - 가로값: right, center, left
+            - 세로값: top, center, bottom
+            - 정해지지 않은값 px, %도 사용가능
+            */
+            /*애니메이션:이시이지반방마*/
+            animation: openDoor 2s ease-in-out infinite alternate;
+            z-index: 1;
+        }
+        /*문짝열기 키프레임*/
+        @keyframes openDoor{
+            from{
+                transform: rotateY(65deg);
+            }
+            to{
+                transform: rotateY(-65deg);
+            }
+        }/*키프레임*/
+        
+        
+        /*손잡이*/
+        .handle{
+            position: absolute;
+            top: 150px;
+            right: 10px;
+            /*부모? .door*/
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #00f;
+        }
+        
+        /*엘사박스*/
+        #elsa{
+            position: absolute;
+            top: 0;
+            width: 150px;
+            height: 280px;
+            overflow: hidden;
+        }
+        #elsa img{
+            margin-top: 50px;
+            margin-left: 150px;
+            transform:rotate(0deg);
+            /*회전축 변경-하단*/
+            transform-origin: bottom;
+            
+            animation: elsa 2s ease-in-out infinite alternate;
+
+        }
+        /*엘사 키프레임*/
+        @keyframes elsa{
+            to{
+                transform: rotate(-10deg)
+            }
+        }/*키프레임*/
+        
+    /**************************************************************************/
+        .cont1{
+            position: relative;
+            top: -300px;
+            left:350px;
+            width: 320px;
+            height: 200px;
+            margin: 0 auto;/*마영오*/
+            background-color: #6e00cc;
+        }
+        /*문열었을때 뚫린부분*/
+        .frame1{
+            position: relative;
+            top: 0px;
+            width: 280px;
+            height: 200px;
+            margin: 0 auto;
+            background: url(images/seashore.jpg) no-repeat center top/auto 200%;
+            /*
+            [ 3D 원근설정 ]
+            1. 셋팅위치: 3D원근설정을 할 대상의 부모박스에 셋팅
+            2. 설정방법:
+            perspective: 수치;
+            - 수치는 px단위로 숫자가 클수록
+            소실점이 먼것이므로 각도가 작아짐(기준점에서 소실점까지의 거리)
+            */
+            perspective: 480px;
+            
+            
+            
+        }
+        /*프레임 배경 바다 애니메이션*/
+        @keyframes sea{
+            to{background-size: auto 150%;}
+        }/*키프레임*/
+        
+        
+        /*문짝*/
+        .door1{
+            position: relative;
+            /*부모자격-손잡이*/
+            width: 280px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.76);
+              transform: rotateX(0deg);
+            transform-origin:top;
+        }
+
+        /*손잡이*/
+        .handle1{
+            position: absolute;
+            bottom: 10px;
+            right: 118px;
+            /*부모? .door*/
+            width: 40px;
+            height: 20px;
+            background-color: #98ebc2;
+        }
+        
+        .cont1:hover .door1{
+             transform: rotateX(65deg);
+        }
+    
+    </style>
+</head>
+<body>
+   
+   <!--문전체부모-->
+    <div class="cont">
+        <!--문열었을때 뚫린부분-->
+        <div class="frame">
+            <!--문짝-->
+            <div class="door">
+                <!--손잡이-->
+                <div class="handle"></div>
+            </div>
+            <!--엘사박스-->
+            <div id="elsa">
+                <img src="images/elsa.png" alt="엘사">
+            </div>
+        </div>
+    </div>
+   
+   
+   <!--창문전체부모-->
+    <div class="cont1">
+        <!--창문열었을때 뚫린부분-->
+        <div class="frame1">
+            <!--창문짝-->
+            <div class="door1">
+                <!--손잡이-->
+                <div class="handle1"></div>
+            </div>
+        </div>
+    </div>
+   
+   
+    
+</body>
+</html>
