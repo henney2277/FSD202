@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Trip</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+   <!--1.전체제목-->
+    <h1 class="tit">나라별 축구 경기장</h1>
+    <!--2.메뉴버튼-->
+    <nav class="city">
+        <ul>
+            <li>
+                <a href="" onclick="chgCity(this);return false;">출발</a>
+                <!--
+                    href는 원래 이동의 특성이 있으므로
+                    onclick에서 함수를 호출시 클릭됨을 인해
+                    페이지이동(새로고침)이 되어진다.
+                    이것을 막기위해 return false를 함수호출 뒤에 쓴다.
+                    이것의 목적은 a태그 이동을 취소하는 것이다!
+                    (리턴폴스-돌아갈때 불꺼!)
+                -->
+            </li>
+            <li>
+                <a href="" onclick="chgCity(this);return false;">서울</a>
+            </li>
+            <li>
+                <a href="" onclick="chgCity(this);return false;">마드리드</a>
+            </li>
+            <li>
+                <a href="" onclick="chgCity(this);return false;">파리</a>
+            </li>
+            <li>
+                <a href="" onclick="chgCity(this);return false;">베를린</a>
+            </li>
+            <li>
+                <a href="" onclick="chgCity(this);return false;">런던</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <!--3.큐브-->
+    <div class="cube">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!--4.도시설명박스-->
+    <div class="cbox">
+        <article class="ctxt">
+            <h2 id="cname">마드리드</h2>
+            <p id="cinfo">스페인 마드리드에 위치한 라 리가의 프로 축구 클럽 레알 마드리드 CF의 홈구장. 스페인 축구 국가대표팀의 홈구장으로 쓰이기도 한다. '산티아고 베르나베우(Santiago Bernabéu)', 혹은 '엘 베르나베우(El Bernabéu)'라는 약칭으로 잘 알려져 있다. 이름의 유래는 클럽의 전설적인 인물인 산티아고 베르나베우이다.UEFA 유로 결승전과 FIFA 월드컵 결승전을 모두 개최한 최초의 유럽 경기장으로, 세계에서 가장 유명한 축구 경기장 중 하나이다.</p>
+        </article>
+    </div>
+    
+</body>
+</html>
